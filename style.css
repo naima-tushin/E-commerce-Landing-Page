@@ -1,0 +1,261 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: url('assets/images/banner.jpg') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin: 0rem 0 1rem;
+}
+
+.cta-button {
+    padding: 0.75rem 1.5rem;
+    background-color: violet;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.cta-button:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+/* Responsive Styles */
+/* For Smaller Desktops */
+@media (max-width: 1024px) {
+    .hero-content p {
+        font-size: 1.4rem;
+    }
+}
+
+/* For Tablets */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        font-size: 0.875rem;
+    }
+}
+
+/* For Mobile Devices */
+@media (max-width: 480px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.875rem;
+    }
+
+    .cta-button {
+        font-size: 0.85rem;
+    }
+}
+
+/* Product Showcase */
+.product-showcase {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.product-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.25rem;
+}
+
+.product-card p {
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.product-card .price {
+    font-size: 1.5rem;
+    color: #ff6f61;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-us p {
+    font-size: 1.25rem;
+    color: #666;
+}
+
+/* Customer Reviews Section */
+.customer-reviews {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.customer-reviews h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.review-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+}
+
+.review-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+    flex: 0 0 auto;
+}
+
+.review-card p {
+    color: #777;
+}
+
+.review-card h4 {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.product-card .price {
+    display: none;
+}
+
+.product-card:hover .price {
+    display: block;
+}
+
+.newsletter-signup {
+    padding: 2rem;
+    background-color: #ff6f61;
+    color: #fff;
+    text-align: center;
+}
+
+.newsletter-signup input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+.newsletter-signup button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter-signup button:hover {
+    background-color: #f4f4f4;
+}
+
+/* Responsive Newsletter Signup */
+@media (max-width: 768px) {
+    .newsletter-signup input {
+        width: 100%;
+        margin: 0 0 1rem 0;
+    }
+
+    .newsletter-signup button {
+        width: 100%;
+    }
+}
