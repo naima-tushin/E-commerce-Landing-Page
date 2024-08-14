@@ -1,19 +1,24 @@
-// Dynamic Reviews (example of loading reviews dynamically)
-const reviews = [
-    { text: "Great quality!", author: "Jane Doe" },
-    { text: "Fast shipping, love it!", author: "Emily Smith" },
-    { text: "Customer service was fantastic!", author: "Michael Johnson" },
-];
+//Customer Reviews Section
+document.addEventListener('DOMContentLoaded', function () {
+    const carouselContent = document.querySelector('.carousel-content');
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
 
-const reviewSlider = document.querySelector('.review-slider');
+    let currentIndex = 0;
 
-function loadReviews() {
-    reviews.forEach(review => {
-        const reviewCard = document.createElement('div');
-        reviewCard.classList.add('review-card');
-        reviewCard.innerHTML = `<p>"${review.text}"</p><h4>${review.author}</h4>`;
-        reviewSlider.appendChild(reviewCard);
+    function updateCarousel() {
+        const offset = currentIndex * -100;
+        carouselContent.style.transform = `translateX(${offset}%)`;
+    }
+
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselItems.length - 1;
+        updateCarousel();
     });
-}
 
-window.onload = loadReviews;
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
+        updateCarousel();
+    });
+});

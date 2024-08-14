@@ -289,7 +289,7 @@ body {
     display: grid;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 70vh;
     background: linear-gradient(to right, rgba(255, 218, 185, 0.9), rgba(0, 0, 0, 0.7));
     color: #fff;
     position: relative;
@@ -299,13 +299,12 @@ body {
 .about-us h2 {
     font-size: 3rem;
     text-align: center;
-    margin-bottom: 2rem;
     text-transform: uppercase;
     color: #fff;
     z-index: 3;
     width: 100%;
     position: absolute;
-    bottom: 75%;
+    bottom: 70%;
     left: 50%;
     transform: translateX(-50%);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
@@ -317,6 +316,7 @@ body {
     gap: 2rem;
     width: 80%;
     margin: auto;
+    margin-bottom: 3rem;
     text-align: left;
     z-index: 2;
     transform: translateY(50px);
@@ -390,12 +390,17 @@ body {
 /* Responsive Styles */
 /* For Smaller Desktops */
 @media screen and (max-width: 1024px) {
+    .about-us {
+        height: 100%;
+    }
+
     .about-us h2 {
         font-size: 2.6rem;
     }
 
     .about-content {
         margin-top: 5rem;
+        margin-bottom: 1rem;
     }
 
     .mission,
@@ -417,6 +422,10 @@ body {
 
 /* For Tablets */
 @media screen and (max-width: 768px) {
+    .about-us {
+        height: 100%;
+    }
+
     .about-us h2 {
         font-size: 2.4rem;
         bottom: 75%;
@@ -424,7 +433,8 @@ body {
 
     .about-content {
         width: 90%;
-        margin-top: 7rem;
+        margin-top: 5rem;
+        margin-bottom: 1rem;
     }
 
     .mission,
@@ -447,7 +457,7 @@ body {
 /* For Mobile Devices */
 @media (max-width: 480px) {
     .about-us {
-        height: 85vh;
+        height: 100%;
     }
 
     .about-us h2 {
@@ -457,8 +467,9 @@ body {
 
     .about-content {
         flex-direction: column;
-        width: 90%;
-        margin-top: 5rem;
+        width: 80%;
+        margin-top: 4rem;
+        margin-bottom: 1rem;
         gap: 1rem;
     }
 
@@ -482,45 +493,235 @@ body {
 }
 
 /* Customer Reviews Section */
-.customer-reviews {
-    padding: 2rem;
-    background-color: #f9f9f9;
+.testimonials-section {
+    margin: 50px auto;
+    max-width: 80%;
     text-align: center;
 }
 
-.customer-reviews h2 {
+.title {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    background-color: black;
+    color: #fff;
+    width: 30%;
+    margin: auto;
+    border-radius: 10px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    padding: 0.5rem;
 }
 
-.review-slider {
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.carousel-content {
     display: flex;
-    overflow-x: auto;
-    gap: 1rem;
+    transition: transform 0.5s ease-in-out;
 }
 
-.review-card {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    min-width: 300px;
-    flex: 0 0 auto;
+.carousel-item {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.review-card p {
-    color: #777;
+.card {
+    background: linear-gradient(to right, rgba(255, 218, 185, 0.9), rgba(0, 0, 0, 0.7)), url('assets/images/review.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
 }
 
-.review-card h4 {
-    margin-top: 1rem;
-    font-size: 1.25rem;
-    color: #333;
+.testimonial-image {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px;
+}
+
+.testimonial-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.rating {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    animation: slideInFromLeft 0.5s ease-out;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.testimonial-feedback {
+    font-size: 1.3rem;
+    margin: 5px 0;
+    width: 60%;
+    margin: auto;
+}
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: black;
+    color: peachpuff;
+    border-radius: 100%;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+/* Responsive Styles */
+/* For Desktops */
+@media (max-width: 1024px) { 
+    .testimonials-section {
+        max-width: 90%;
+    }
+
+    .title {
+        width: 40%;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        font-size: 1.75rem;
+        padding: 10px 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .testimonial-name {
+        font-size: 2rem;
+    }
+
+    .testimonial-feedback {
+        width: 80%;
+        font-size: 1.3rem;
+    }
+
+    .carousel-prev {
+        left: 30px;
+    }
+    
+    .carousel-next {
+        right: 30px;
+    }
+}
+
+/* For Tablets */
+@media (max-width: 768px) {
+    .testimonials-section {
+        max-width: 90%;
+    }
+         
+    .title {
+        width: 50%;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        font-size: 1.5rem;
+        padding: 6px 14px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .testimonial-image {
+        width: 65px;
+        height: 65px;
+    }
+
+    .testimonial-name {
+        font-size: 1.5rem;
+    }
+
+    .rating {
+        font-size: 1.25rem;
+    }
+
+    .testimonial-feedback {
+        width: 80%;
+    }
+}
+
+/* For Mobile Devices */
+@media (max-width: 480px) {
+    .testimonials-section {
+        max-width: 95%;
+    }
+    
+    .title {
+        width: 80%;
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        font-size: 1rem;
+        padding: 5px 10px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 10px 5px;
+    }
+
+    .testimonial-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .testimonial-name {
+        font-size: 1.3rem;
+    }
+
+    .rating {
+        font-size: 1rem;
+    }
+
+    .testimonial-feedback {
+        width: 90%;
+        font-size: 0.8rem;
+    }
 }
 
 .newsletter-signup {
     padding: 2rem;
-    background-color: #ff6f61;
+    background-color: black;
     color: #fff;
     text-align: center;
 }
