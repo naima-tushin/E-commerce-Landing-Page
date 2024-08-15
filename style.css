@@ -486,10 +486,17 @@ body {
 }
 
 /* Responsive Styles */
+/* For Larger Desktops */
+@media screen and (max-width: 1440px) {
+    .about-us {
+        height: 500px;
+    }
+}
+
 /* For Smaller Desktops */
 @media screen and (max-width: 1024px) {
     .about-us {
-        height: 100%;
+        height: 500px;
     }
 
     .about-us h2 {
@@ -497,7 +504,7 @@ body {
     }
 
     .about-content {
-        margin-top: 5rem;
+        margin-top: 6rem;
         margin-bottom: 1rem;
     }
 

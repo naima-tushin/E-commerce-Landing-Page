@@ -32,11 +32,33 @@ document.addEventListener("DOMContentLoaded", () => {
 //Customer Reviews Section
 document.addEventListener('DOMContentLoaded', function () {
     const carouselContent = document.querySelector('.carousel-content');
-    const carouselItems = document.querySelectorAll('.carousel-item');
     const prevButton = document.querySelector('.carousel-prev');
     const nextButton = document.querySelector('.carousel-next');
-
     let currentIndex = 0;
+
+    fetch('reviews.json')
+        .then(response => response.json())
+        .then(reviews => {
+            renderReviews(reviews);
+        })
+        .catch(error => console.error('Error loading reviews:', error));
+
+    function renderReviews(reviews) {
+        carouselContent.innerHTML = reviews.map(review => {
+            const ratingStars = '⭐'.repeat(review.rating);
+            return `
+                    <div class="carousel-item">
+                        <div class="card">
+                            <img src="${review.image}" alt="${review.name}" class="testimonial-image">
+                            <p class="testimonial-name">${review.name}</p>
+                            <div class="rating">${ratingStars}</div>
+                            <p class="testimonial-feedback">${review.feedback}</p>
+                        </div>
+                    </div>
+                `;
+        }).join('');
+        updateCarousel();
+    }
 
     function updateCarousel() {
         const offset = currentIndex * -100;
@@ -44,27 +66,26 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselItems.length - 1;
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselContent.children.length - 1;
         updateCarousel();
     });
 
     nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
+        currentIndex = (currentIndex < carouselContent.children.length - 1) ? currentIndex + 1 : 0;
         updateCarousel();
     });
 });
 
 //Newsletter Signup Section
 document.getElementById('newsletter-form').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the form from submitting normally
+    event.preventDefault();
 
     const emailInput = document.getElementById('newsletter-email');
     const emailValue = emailInput.value.trim();
 
     if (validateEmail(emailValue)) {
         alert('Thank you for subscribing!');
-        emailInput.value = ''; // Clear the input field
-        // Here you would typically send the email to your server or email service
+        emailInput.value = '';
     } else {
         alert('Please enter a valid email address.');
     }

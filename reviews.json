@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Olivia Harper",
+        "image": "https://i.ibb.co/kHjmS28/customer-1.jpg",
+        "rating": 4,
+        "feedback": "The eyeshadow palette is amazing! The colors are vibrant and blend seamlessly. It's perfect for creating both everyday and glam looks!"
+    },
+    {
+        "name": "Sophia Martinez",
+        "image": "https://i.ibb.co/tDwGZ2P/customer-2.jpg",
+        "rating": 5,
+        "feedback": "From foundation to mascara, every product has impressed me. I feel more confident and camera-ready every day!"
+    },
+    {
+        "name": "Amelia Johnson",
+        "image": "https://i.ibb.co/xgGkyks/customer-3.jpg",
+        "rating": 4,
+        "feedback": "I can’t get enough of the blush and highlighter! They add the perfect touch to my everyday look. Highly recommended!"
+    },
+    {
+        "name": "Isabella Thompson",
+        "image": "https://i.ibb.co/5vmG7rj/customer-4.jpg",
+        "rating": 4,
+        "feedback": "The lipstick shades are to die for! Perfect for every occasion, and they last all day long. My new go-to cosmetics brand!"
+    }
+]
