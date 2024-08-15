@@ -9,6 +9,8 @@
     <title>E-commerce Landing Page</title>
     <!-- CSS Link -->
     <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 
 <body>
@@ -24,70 +26,126 @@
     <!-- Product Showcase -->
     <section id="products" class="product-showcase">
         <h2>Product <span class="showcase">Showcase</span></h2>
+        <!-- Filter Section -->
+    <section id="filter" class="filter-section">
+        <div>
+            <label for="category">Category:</label>
+            <select id="category">
+                <option value="all">All</option>
+                <option value="makeup-brushes">Makeup Brushes</option>
+                <option value="perfumes">Perfumes</option>
+                <option value="lipsticks">Lipsticks</option>
+                <option value="foundation">Foundation</option>
+                <option value="face-powder">Face Powder</option>
+                <option value="eyeshadow">Eyeshadow</option>
+                <option value="highlighter">Highlighter</option>
+                <option value="blush">Blush</option>
+                <option value="mascara">Mascara</option>
+                <option value="beauty-blenders">Beauty Blenders</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="price-range">Price Range:</label>
+            <input type="range" id="price-range" min="0" max="25" value="25" step="1">
+            <span id="price-value">$25</span>
+        </div>
+    </section>
         <div class="product-grid">
             <!-- Product Cards -->
-            <div class="product-card">
+            <div class="product-card" data-category="makeup-brushes" data-price="7">
                 <img src="assets/images/product_1.jpeg" alt="Product 1">
                 <h3>Makeup Brushes</h3>
                 <p>High-quality makeup brushes for a flawless application. Perfect for both professionals and beginners.
                 </p>
-                <div class="price">$5.00</div>
+                <p class="price">$7</p>
+                <button class="btn-cart">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-category="perfumes" data-price="19">
                 <img src="assets/images/product_2.webp" alt="Product 2">
                 <h3>Perfumes</h3>
                 <p>Luxurious fragrances that last all day. Choose from a variety of captivating scents.</p>
-                <div class="price">$20.00</div>
+                <p class="price">$19</p>
+                <button class="btn-cart">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-category="lipsticks" data-price="9">
                 <img src="assets/images/product_3.jpg" alt="Product 3">
                 <h3>Lipsticks</h3>
                 <p>Vibrant and long-lasting lipsticks available in a range of stunning shades.</p>
-                <div class="price">$6.00</div>
+                <p class="price">$9</p>
+                <button class="btn-cart">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-category="foundation" data-price="22">
                 <img src="assets/images/product_4.webp" alt="Product 4">
                 <h3>Foundation</h3>
                 <p>Flawless foundation for a perfect complexion. Available in multiple shades to match every skin tone.
                 </p>
-                <div class="price">$15.00</div>
+                <p class="price">$22</p>
+                <button class="btn-cart">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-category="face-powder" data-price="8">
                 <img src="assets/images/product_5.jpg" alt="Product 5">
                 <h3>Face Powder</h3>
                 <p>Set your makeup with a smooth face powder that controls shine and lasts all day.</p>
-                <div class="price">$10.00</div>
+                <p class="price">$8</p>
+                <button class="btn-cart">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-category="eyeshadow" data-price="20">
                 <img src="assets/images/product_6.jpg" alt="Product 6">
                 <h3>Eyeshadow Palettes</h3>
                 <p>Create endless eye looks with our versatile eyeshadow palettes, featuring a range of stunning colors.
                 </p>
-                <div class="price">$19.00</div>
+                <p class="price">$20</p>
+                <button class="btn-cart">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-category="highlighter" data-price="12">
                 <img src="assets/images/product_7.jpg" alt="Product 7">
                 <h3>Highlighter</h3>
                 <p>Add a radiant glow to your complexion with our highlighter. Perfect for a luminous finish.</p>
-                <div class="price">$8.00</div>
+                <p class="price">$12</p>
+                <button class="btn-cart">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-category="blush" data-price="10">
                 <img src="assets/images/product_8.jpg" alt="Product 8">
                 <h3>Blush</h3>
                 <p>Give your cheeks a natural flush with our range of beautiful blushes. Ideal for every skin tone.</p>
-                <div class="price">$4.00</div>
+                <p class="price">$10</p>
+                <button class="btn-cart">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-category="mascara" data-price="6">
                 <img src="assets/images/product_9.webp" alt="Product 9">
                 <h3>Mascara</h3>
                 <p>Enhance your lashes with our volumizing mascara for a dramatic look that lasts all day.</p>
-                <div class="price">$7.00</div>
+                <p class="price">$6</p>
+                <button class="btn-cart">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-category="beauty-blenders" data-price="5">
                 <img src="assets/images/product_10.jpg" alt="Product 10">
                 <h3>Beauty Blenders</h3>
-                <p>Achieve a flawless makeup application with our soft and durable beauty blenders.</p>
-                <div class="price">$3.00</div>
+                <p>Achieve a flawless base with our soft and durable beauty blenders. Perfect for blending foundation
+                    and concealer.</p>
+                <p class="price">$5</p>
+                <button class="btn-cart">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
             </div>
         </div>
     </section>
@@ -129,7 +187,8 @@
                         <div class="rating">
                             ⭐⭐⭐⭐
                         </div>
-                        <p class="testimonial-feedback">The eyeshadow palette is amazing! The colors are vibrant and blend seamlessly. It's perfect for creating both everyday and glam looks!</p>
+                        <p class="testimonial-feedback">The eyeshadow palette is amazing! The colors are vibrant and
+                            blend seamlessly. It's perfect for creating both everyday and glam looks!</p>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -139,7 +198,8 @@
                         <div class="rating">
                             ⭐⭐⭐⭐⭐
                         </div>
-                        <p class="testimonial-feedback">From foundation to mascara, every product has impressed me. I feel more confident and camera-ready every day!</p>
+                        <p class="testimonial-feedback">From foundation to mascara, every product has impressed me. I
+                            feel more confident and camera-ready every day!</p>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -149,7 +209,8 @@
                         <div class="rating">
                             ⭐⭐⭐⭐
                         </div>
-                        <p class="testimonial-feedback">I can’t get enough of the blush and highlighter! They add the perfect touch to my everyday look. Highly recommended!</p>
+                        <p class="testimonial-feedback">I can’t get enough of the blush and highlighter! They add the
+                            perfect touch to my everyday look. Highly recommended!</p>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -159,7 +220,8 @@
                         <div class="rating">
                             ⭐⭐⭐⭐
                         </div>
-                        <p class="testimonial-feedback">The lipstick shades are to die for! Perfect for every occasion, and they last all day long. My new go-to cosmetics brand!</p>
+                        <p class="testimonial-feedback">The lipstick shades are to die for! Perfect for every occasion,
+                            and they last all day long. My new go-to cosmetics brand!</p>
                     </div>
                 </div>
             </div>

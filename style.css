@@ -111,6 +111,38 @@ body {
 }
 
 /* Product Showcase */
+.filter-section {
+    display: flex;
+    gap: 2rem;
+    width: 50%;
+    margin: 2rem auto;
+    border-radius: 10px;
+}
+
+.filter-section div {
+    display: flex;
+    align-items: center;
+}
+
+.filter-section label {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+#category {
+    font-size: 1.3rem;
+}
+
+#price-range {
+    width: 200px;
+    margin-right: 10px;
+}
+
+#price-value {
+    font-size: 1.5rem;
+}
+
 .product-showcase {
     padding: 3rem;
     text-align: center;
@@ -134,7 +166,7 @@ body {
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    gap: 1rem;
     margin-top: 2rem;
 }
 
@@ -143,6 +175,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    max-width: 300px;
 }
 
 .product-card:hover {
@@ -166,23 +199,50 @@ body {
 }
 
 .product-card .price {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bold;
+}
+
+.product-card .btn-cart {
     display: none;
 }
 
-.product-card:hover .price {
+.product-card:hover .btn-cart {
     display: block;
 }
 
-.product-card .price {
-    font-size: 1.5rem;
+.product-card .btn-cart {
+    font-size: 1.2rem;
+    background-color: #fff;
     color: lightblue;
-    margin-top: 0.5rem;
     font-weight: bold;
+    border: none;
+    margin: 10px auto;
 }
 
 /* Responsive Styles */
 /* For Smaller Desktops */
 @media (max-width: 1024px) {
+    .filter-section {
+        width: 63%;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    #category {
+        font-size: 1.3rem;
+    }
+    
+    #price-range {
+        width: 100px;
+    }
+    
+    #price-value {
+        font-size: 1.3rem;
+    }
+
     .product-showcase {
         padding: 2rem;
     }
@@ -202,7 +262,7 @@ body {
         font-size: 0.9rem;
     }
 
-    .product-card .price {
+    .product-card .btn-cart {
         margin-top: 10px;
         font-size: 1.3rem;
     }
@@ -215,6 +275,24 @@ body {
 
 /* For Tablets */
 @media (max-width: 768px) {
+    .filter-section {
+        width: 85%;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    #category {
+        font-size: 1.3rem;
+    }
+    
+    #price-range {
+        width: 100px;
+    }
+    
+    #price-value {
+        font-size: 1.3rem;
+    }
+
     .product-showcase {
         padding: 1.5rem;
     }
@@ -234,7 +312,7 @@ body {
         font-size: 0.9rem;
     }
 
-    .product-card .price {
+    .product-card .btn-cart {
         margin-top: 10px;
         font-size: 1.5rem;
     }
@@ -247,6 +325,26 @@ body {
 
 /* For Mobile Devices */
 @media (max-width: 480px) {
+    .filter-section {
+        display: grid;
+        gap: 1rem;
+        width: 100%;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    #category {
+        font-size: 1.3rem;
+    }
+    
+    #price-range {
+        width: 100px;
+    }
+    
+    #price-value {
+        font-size: 1.3rem;
+    }
+
     .product-showcase {
         padding: 1.5rem 0.5rem;
     }
@@ -278,7 +376,7 @@ body {
         padding: 0.5rem;
     }
 
-    .product-card .price {
+    .product-card .btn-cart {
         font-size: 1rem;
         margin-top: 3px;
     }
@@ -564,6 +662,7 @@ body {
         transform: translateX(-100%);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
@@ -601,7 +700,7 @@ body {
 
 /* Responsive Styles */
 /* For Desktops */
-@media (max-width: 1024px) { 
+@media (max-width: 1024px) {
     .testimonials-section {
         max-width: 90%;
     }
@@ -632,7 +731,7 @@ body {
     .carousel-prev {
         left: 30px;
     }
-    
+
     .carousel-next {
         right: 30px;
     }
@@ -643,7 +742,7 @@ body {
     .testimonials-section {
         max-width: 90%;
     }
-         
+
     .title {
         width: 50%;
     }
@@ -682,7 +781,7 @@ body {
     .testimonials-section {
         max-width: 95%;
     }
-    
+
     .title {
         width: 80%;
         font-size: 1.5rem;
