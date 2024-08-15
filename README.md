@@ -5,7 +5,7 @@ This is a responsive and visually appealing e-commerce landing page created with
 
 ## Features
 - Hero section with a CTA button.
-- Product showcase with hover effects.
+- Product showcase with hover effects and filtering category and price.
 - About Us section.
 - Customer review slider.
 - Newsletter signup form.
