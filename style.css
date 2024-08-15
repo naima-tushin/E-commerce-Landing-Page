@@ -230,15 +230,15 @@ body {
         justify-items: center;
         align-items: center;
     }
-    
+
     #category {
         font-size: 1.3rem;
     }
-    
+
     #price-range {
         width: 100px;
     }
-    
+
     #price-value {
         font-size: 1.3rem;
     }
@@ -280,15 +280,15 @@ body {
         justify-items: center;
         align-items: center;
     }
-    
+
     #category {
         font-size: 1.3rem;
     }
-    
+
     #price-range {
         width: 100px;
     }
-    
+
     #price-value {
         font-size: 1.3rem;
     }
@@ -332,15 +332,15 @@ body {
         justify-items: center;
         align-items: center;
     }
-    
+
     #category {
         font-size: 1.3rem;
     }
-    
+
     #price-range {
         width: 100px;
     }
-    
+
     #price-value {
         font-size: 1.3rem;
     }
@@ -818,43 +818,102 @@ body {
     }
 }
 
+/* Newsletter Signup Section */
 .newsletter-signup {
-    padding: 2rem;
+    padding: 1rem;
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-signup h2 {
+    font-size: 1.5rem;
     background-color: black;
     color: #fff;
-    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
 }
 
-.newsletter-signup input {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    margin-right: 1rem;
+.newsletter-signup .newsletter-heading {
+    color: peachpuff;
+    font-weight: bold;
 }
 
-.newsletter-signup button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background-color: #fff;
-    color: #ff6f61;
+#newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#newsletter-form input {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+#newsletter-form input:focus {
+    border-color: peachpuff;
+    outline: none;
+}
+
+#newsletter-form button {
+    padding: 1rem;
+    background-color: peachpuff;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    width: 100%;
+    max-width: 200px;
     cursor: pointer;
 }
 
-.newsletter-signup button:hover {
-    background-color: #f4f4f4;
+#newsletter-form button:hover {
+    background-color: lightblue;
+    transform: scale(1.05);
 }
 
-/* Responsive Newsletter Signup */
+#newsletter-form button:active {
+    transform: scale(0.95);
+}
+
+/* Responsive Styles */
+/* For Tablets */
 @media (max-width: 768px) {
-    .newsletter-signup input {
-        width: 100%;
-        margin: 0 0 1rem 0;
+    .newsletter-signup h2 {
+        font-size: 1.5rem;
     }
 
-    .newsletter-signup button {
+    #newsletter-form input,
+    #newsletter-form button {
+        font-size: 1.3rem;
         width: 100%;
+    }
+}
+
+/* For Mobile Devices */
+@media (max-width: 480px) {
+    .newsletter-signup {
+        width: 85%;
+    }
+
+    .newsletter-signup h2 {
+        font-size: 1rem;
+    }
+
+    #newsletter-form input,
+    #newsletter-form button {
+        font-size: 1rem;
+        padding: 1rem;
+        width: 90%;
     }
 }

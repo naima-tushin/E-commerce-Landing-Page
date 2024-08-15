@@ -27,30 +27,29 @@
     <section id="products" class="product-showcase">
         <h2>Product <span class="showcase">Showcase</span></h2>
         <!-- Filter Section -->
-    <section id="filter" class="filter-section">
-        <div>
-            <label for="category">Category:</label>
-            <select id="category">
-                <option value="all">All</option>
-                <option value="makeup-brushes">Makeup Brushes</option>
-                <option value="perfumes">Perfumes</option>
-                <option value="lipsticks">Lipsticks</option>
-                <option value="foundation">Foundation</option>
-                <option value="face-powder">Face Powder</option>
-                <option value="eyeshadow">Eyeshadow</option>
-                <option value="highlighter">Highlighter</option>
-                <option value="blush">Blush</option>
-                <option value="mascara">Mascara</option>
-                <option value="beauty-blenders">Beauty Blenders</option>
-            </select>
-        </div>
-
-        <div>
-            <label for="price-range">Price Range:</label>
-            <input type="range" id="price-range" min="0" max="25" value="25" step="1">
-            <span id="price-value">$25</span>
-        </div>
-    </section>
+        <section id="filter" class="filter-section">
+            <div>
+                <label for="category">Category:</label>
+                <select id="category">
+                    <option value="all">All</option>
+                    <option value="makeup-brushes">Makeup Brushes</option>
+                    <option value="perfumes">Perfumes</option>
+                    <option value="lipsticks">Lipsticks</option>
+                    <option value="foundation">Foundation</option>
+                    <option value="face-powder">Face Powder</option>
+                    <option value="eyeshadow">Eyeshadow</option>
+                    <option value="highlighter">Highlighter</option>
+                    <option value="blush">Blush</option>
+                    <option value="mascara">Mascara</option>
+                    <option value="beauty-blenders">Beauty Blenders</option>
+                </select>
+            </div>
+            <div>
+                <label for="price-range">Price Range:</label>
+                <input type="range" id="price-range" min="0" max="25" value="25" step="1">
+                <span id="price-value">$25</span>
+            </div>
+        </section>
         <div class="product-grid">
             <!-- Product Cards -->
             <div class="product-card" data-category="makeup-brushes" data-price="7">
@@ -232,14 +231,15 @@
         </div>
     </div>
 
-    <!-- NewsLetter SignUp -->
+    <!-- Newsletter Signup Section -->
     <section class="newsletter-signup">
-        <h2>Subscribe to our Newsletter</h2>
+        <h2>Subscribe to our <span class="newsletter-heading">Newsletter</span></h2>
         <form id="newsletter-form">
-            <input type="email" placeholder="Enter your email" required>
+            <input type="email" id="newsletter-email" placeholder="Enter Your Email" required>
             <button type="submit">Subscribe</button>
         </form>
     </section>
+
 
     <!-- JS Link -->
     <script src="script.js"></script>
